@@ -1,8 +1,8 @@
-﻿State,Energy_Consumption_per_Capita
-New South Wales,163.3
-Victoria,172
-Queensland,264
-South Australia,161.9
-Western Australia,448.7
-Tasmania,183.9
-Northern Territory,512.3
+﻿State,Population,Energy_Consumption,Energy_Consumption_per_Capita
+New South Wales,8811429,1439.2,163.3
+Victoria,6818442,1172.6,172
+Queensland,5461367,1441.7,264
+South Australia,1853064,300,161.9
+Western Australia,2883245,1293.6,448.7
+Tasmania,573479,105.5,183.9
+Northern Territory,252955,129.6,512.3
