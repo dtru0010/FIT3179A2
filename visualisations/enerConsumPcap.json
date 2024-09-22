@@ -1,0 +1,84 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "The Australian Energy Consumption (GJ) per Capita in 2023",
+    "width": 800,
+    "height": 450,
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/data/STE_2016_AUST.json",
+          "format": {
+            "type": "topojson",
+            "feature": "STE_2016_AUST"
+          }
+        },
+        "mark": {
+          "type": "geoshape",
+          "fill": "lightgrey",
+          "stroke": "white"
+        },
+        "transform": [
+          {
+            "calculate": "'Data is not available in ' + datum.properties.STE_NAME16 + '.'",
+            "as": "note"
+          }
+        ],
+        "encoding": { "tooltip": {"field": "note"} }
+      },
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/data/STE_2016_AUST.json",
+          "format": {
+            "type": "topojson",
+            "feature": "STE_2016_AUST"
+          }
+        },
+        "transform": [
+          {
+            "lookup": "properties.STE_NAME16",
+            "from": {
+              "data": {
+                "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/data/energy_consumption_per_capita_state.csv"
+              },
+              "key": "State",
+              "fields": ["Population", "Energy_Consumption", "Energy_Consumption_per_Capita"]
+            }
+          }
+        ],
+        "mark": {
+          "type": "geoshape",
+          "stroke": "white"
+        },
+        "encoding": {
+          "color": {
+            "field": "Energy_Consumption_per_Capita",
+            "type": "quantitative",
+            "title": ""
+          },
+          "tooltip": [
+            {
+              "field": "properties.STE_NAME16", 
+              "type": "nominal",
+              "title": "State"
+            },
+            {
+              "field": "Population", 
+              "type": "quantitative",
+              "title": "Population",
+              "format": ","
+            },
+            {
+              "field": "Energy_Consumption",
+              "type": "quantitative",
+              "title": "Energy Consumption (PJ)"
+            },
+            {
+              "field": "Energy_Consumption_per_Capita",
+              "type": "quantitative",
+              "title": "Energy Consumption per Capita (GJ/person)"
+            }
+          ]
+        }
+      }
+    ]
+  }
