@@ -1,0 +1,106 @@
+﻿State,Year,Energy_Amount
+New South Wales,2008-09,1593.54
+New South Wales,2009-10,1645.29
+New South Wales,2010-11,1668.03
+New South Wales,2011-12,1621.31
+New South Wales,2012-13,1568.43
+New South Wales,2013-14,1526.54
+New South Wales,2014-15,1478.84
+New South Wales,2015-16,1524.26
+New South Wales,2016-17,1533.05
+New South Wales,2017-18,1564.67
+New South Wales,2018-19,1555.63
+New South Wales,2019-20,1477.82
+New South Wales,2020-21,1401.64
+New South Wales,2021-22,1374.39
+New South Wales,2022-23,1439.19
+Victoria,2008-09,"1,421.7"
+Victoria,2009-10,"1,426.7"
+Victoria,2010-11,"1,448.6"
+Victoria,2011-12,"1,457.3"
+Victoria,2012-13,"1,425.3"
+Victoria,2013-14,"1,394.8"
+Victoria,2014-15,"1,392.3"
+Victoria,2015-16,"1,414.8"
+Victoria,2016-17,"1,384.8"
+Victoria,2017-18,"1,310.0"
+Victoria,2018-19,"1,276.3"
+Victoria,2019-20,"1,207.7"
+Victoria,2020-21,"1,128.8"
+Victoria,2021-22,"1,148.1"
+Victoria,2022-23,"1,172.6"
+Queensland,2008-09,"1,345.7"
+Queensland,2009-10,"1,294.4"
+Queensland,2010-11,"1,249.6"
+Queensland,2011-12,"1,314.8"
+Queensland,2012-13,"1,334.8"
+Queensland,2013-14,"1,338.9"
+Queensland,2014-15,"1,436.1"
+Queensland,2015-16,"1,464.6"
+Queensland,2016-17,"1,531.9"
+Queensland,2017-18,"1,548.4"
+Queensland,2018-19,"1,529.5"
+Queensland,2019-20,"1,486.3"
+Queensland,2020-21,"1,442.6"
+Queensland,2021-22,"1,428.3"
+Queensland,2022-23,"1,441.7"
+Western Australia,2008-09,917.2
+Western Australia,2009-10,905.7
+Western Australia,2010-11,980.3
+Western Australia,2011-12,982.2
+Western Australia,2012-13,"1,019.5"
+Western Australia,2013-14,"1,066.6"
+Western Australia,2014-15,"1,045.3"
+Western Australia,2015-16,"1,123.9"
+Western Australia,2016-17,"1,176.8"
+Western Australia,2017-18,"1,209.7"
+Western Australia,2018-19,"1,261.2"
+Western Australia,2019-20,"1,264.9"
+Western Australia,2020-21,"1,238.9"
+Western Australia,2021-22,"1,257.9"
+Western Australia,2022-23,"1,293.6"
+South Australia,2008-09,357.2
+South Australia,2009-10,343.7
+South Australia,2010-11,342.8
+South Australia,2011-12,307.7
+South Australia,2012-13,356.3
+South Australia,2013-14,337.1
+South Australia,2014-15,356.9
+South Australia,2015-16,316.4
+South Australia,2016-17,287.4
+South Australia,2017-18,334.7
+South Australia,2018-19,324.5
+South Australia,2019-20,317.7
+South Australia,2020-21,308.7
+South Australia,2021-22,301.3
+South Australia,2022-23,300.0
+Tasmania,2008-09,113.8
+Tasmania,2009-10,113.7
+Tasmania,2010-11,113.8
+Tasmania,2011-12,107.0
+Tasmania,2012-13,112.3
+Tasmania,2013-14,108.0
+Tasmania,2014-15,104.9
+Tasmania,2015-16,107.1
+Tasmania,2016-17,107.5
+Tasmania,2017-18,110.5
+Tasmania,2018-19,108.2
+Tasmania,2019-20,100.1
+Tasmania,2020-21,103.1
+Tasmania,2021-22,105.4
+Tasmania,2022-23,105.5
+Northern Territory,2008-09,95.0
+Northern Territory,2009-10,94.2
+Northern Territory,2010-11,99.8
+Northern Territory,2011-12,98.2
+Northern Territory,2012-13,100.2
+Northern Territory,2013-14,99.1
+Northern Territory,2014-15,84.0
+Northern Territory,2015-16,83.9
+Northern Territory,2016-17,83.3
+Northern Territory,2017-18,90.2
+Northern Territory,2018-19,133.0
+Northern Territory,2019-20,146.5
+Northern Territory,2020-21,145.3
+Northern Territory,2021-22,149.8
+Northern Territory,2022-23,129.6
