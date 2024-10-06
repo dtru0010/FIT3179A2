@@ -1,0 +1,421 @@
+﻿State,Year,Primary_Fuel,Energy_Amount
+New South Wales,2009,Coal,800.9
+New South Wales,2009,Oil,587.5
+New South Wales,2009,Gas,131.6
+New South Wales,2009,Renewables,54.7
+New South Wales,2010,Coal,771.8
+New South Wales,2010,Oil,638.9
+New South Wales,2010,Gas,148.7
+New South Wales,2010,Renewables,63.8
+New South Wales,2011,Coal,732.2
+New South Wales,2011,Oil,685
+New South Wales,2011,Gas,146.5
+New South Wales,2011,Renewables,68.6
+New South Wales,2012,Coal,692.7
+New South Wales,2012,Oil,687.4
+New South Wales,2012,Gas,142.1
+New South Wales,2012,Renewables,71.1
+New South Wales,2013,Coal,643
+New South Wales,2013,Oil,677.4
+New South Wales,2013,Gas,157.4
+New South Wales,2013,Renewables,70.9
+New South Wales,2014,Coal,603.5
+New South Wales,2014,Oil,666.6
+New South Wales,2014,Gas,167
+New South Wales,2014,Renewables,72.8
+New South Wales,2015,Coal,587.8
+New South Wales,2015,Oil,621.4
+New South Wales,2015,Gas,163.5
+New South Wales,2015,Renewables,71
+New South Wales,2016,Coal,620.9
+New South Wales,2016,Oil,633.6
+New South Wales,2016,Gas,164.8
+New South Wales,2016,Renewables,82.4
+New South Wales,2017,Coal,625.9
+New South Wales,2017,Oil,652.6
+New South Wales,2017,Gas,143.6
+New South Wales,2017,Renewables,84.5
+New South Wales,2018,Coal,636.7
+New South Wales,2018,Oil,672.4
+New South Wales,2018,Gas,144.1
+New South Wales,2018,Renewables,86.6
+New South Wales,2019,Coal,640.3
+New South Wales,2019,Oil,665
+New South Wales,2019,Gas,139.2
+New South Wales,2019,Renewables,90.4
+New South Wales,2020,Coal,606.6
+New South Wales,2020,Oil,611.4
+New South Wales,2020,Gas,141.9
+New South Wales,2020,Renewables,95.6
+New South Wales,2021,Coal,579.8
+New South Wales,2021,Oil,556
+New South Wales,2021,Gas,135.8
+New South Wales,2021,Renewables,110.6
+New South Wales,2022,Coal,534.6
+New South Wales,2022,Oil,547.5
+New South Wales,2022,Gas,145.3
+New South Wales,2022,Renewables,125.1
+New South Wales,2023,Coal,525.4
+New South Wales,2023,Oil,619.2
+New South Wales,2023,Gas,134.3
+New South Wales,2023,Renewables,138.8
+Victoria,2009,Coal,695.3
+Victoria,2009,Oil,432.9
+Victoria,2009,Gas,273.5
+Victoria,2009,Renewables,33.6
+Victoria,2010,Coal,688.7
+Victoria,2010,Oil,448.4
+Victoria,2010,Gas,263.5
+Victoria,2010,Renewables,36
+Victoria,2011,Coal,681.2
+Victoria,2011,Oil,488.8
+Victoria,2011,Gas,258.6
+Victoria,2011,Renewables,44.7
+Victoria,2012,Coal,705.7
+Victoria,2012,Oil,469.3
+Victoria,2012,Gas,263.6
+Victoria,2012,Renewables,41
+Victoria,2013,Coal,622
+Victoria,2013,Oil,488.3
+Victoria,2013,Gas,276.2
+Victoria,2013,Renewables,55.5
+Victoria,2014,Coal,605.6
+Victoria,2014,Oil,495.5
+Victoria,2014,Gas,252.8
+Victoria,2014,Renewables,57.2
+Victoria,2015,Coal,641.2
+Victoria,2015,Oil,464.5
+Victoria,2015,Gas,257.7
+Victoria,2015,Renewables,59.2
+Victoria,2016,Coal,617.4
+Victoria,2016,Oil,507
+Victoria,2016,Gas,253.9
+Victoria,2016,Renewables,62.3
+Victoria,2017,Coal,577.3
+Victoria,2017,Oil,512.4
+Victoria,2017,Gas,258.7
+Victoria,2017,Renewables,65.6
+Victoria,2018,Coal,467.4
+Victoria,2018,Oil,517.9
+Victoria,2018,Gas,263.6
+Victoria,2018,Renewables,66.1
+Victoria,2019,Coal,444.1
+Victoria,2019,Oil,507.9
+Victoria,2019,Gas,255.9
+Victoria,2019,Renewables,72
+Victoria,2020,Coal,423.2
+Victoria,2020,Oil,453
+Victoria,2020,Gas,256.5
+Victoria,2020,Renewables,77.4
+Victoria,2021,Coal,427.7
+Victoria,2021,Oil,384.9
+Victoria,2021,Gas,236.3
+Victoria,2021,Renewables,89.3
+Victoria,2022,Coal,410.7
+Victoria,2022,Oil,412.4
+Victoria,2022,Gas,237.5
+Victoria,2022,Renewables,104.8
+Victoria,2023,Coal,398.2
+Victoria,2023,Oil,465.6
+Victoria,2023,Gas,215.2
+Victoria,2023,Renewables,111.8
+Queensland,2009,Coal,629.2
+Queensland,2009,Oil,469.5
+Queensland,2009,Gas,187.9
+Queensland,2009,Renewables,77.4
+Queensland,2010,Coal,547.5
+Queensland,2010,Oil,466.9
+Queensland,2010,Gas,195.8
+Queensland,2010,Renewables,107.4
+Queensland,2011,Coal,497.2
+Queensland,2011,Oil,483.3
+Queensland,2011,Gas,190.6
+Queensland,2011,Renewables,98.7
+Queensland,2012,Coal,481.5
+Queensland,2012,Oil,504.8
+Queensland,2012,Gas,246.1
+Queensland,2012,Renewables,99.7
+Queensland,2013,Coal,473.4
+Queensland,2013,Oil,514.7
+Queensland,2013,Gas,239.8
+Queensland,2013,Renewables,114.2
+Queensland,2014,Coal,442.9
+Queensland,2014,Oil,531.2
+Queensland,2014,Gas,258
+Queensland,2014,Renewables,109.6
+Queensland,2015,Coal,485.3
+Queensland,2015,Oil,555.5
+Queensland,2015,Gas,294.9
+Queensland,2015,Renewables,122.5
+Queensland,2016,Coal,517.8
+Queensland,2016,Oil,542.5
+Queensland,2016,Gas,296.4
+Queensland,2016,Renewables,120.4
+Queensland,2017,Coal,544.2
+Queensland,2017,Oil,563.6
+Queensland,2017,Gas,309.6
+Queensland,2017,Renewables,129.6
+Queensland,2018,Coal,570.6
+Queensland,2018,Oil,579.1
+Queensland,2018,Gas,302.3
+Queensland,2018,Renewables,120.6
+Queensland,2019,Coal,554.2
+Queensland,2019,Oil,577.3
+Queensland,2019,Gas,294
+Queensland,2019,Renewables,123.9
+Queensland,2020,Coal,524.4
+Queensland,2020,Oil,543.8
+Queensland,2020,Gas,313
+Queensland,2020,Renewables,127
+Queensland,2021,Coal,506.1
+Queensland,2021,Oil,501.8
+Queensland,2021,Gas,313
+Queensland,2021,Renewables,139.6
+Queensland,2022,Coal,485.6
+Queensland,2022,Oil,505
+Queensland,2022,Gas,305.7
+Queensland,2022,Renewables,143.2
+Queensland,2023,Coal,471.1
+Queensland,2023,Oil,532.6
+Queensland,2023,Gas,290.5
+Queensland,2023,Renewables,162.2
+Western Australia,2009,Coal,132.9
+Western Australia,2009,Oil,294.3
+Western Australia,2009,Gas,474.7
+Western Australia,2009,Renewables,15.6
+Western Australia,2010,Coal,125.6
+Western Australia,2010,Oil,290
+Western Australia,2010,Gas,474.9
+Western Australia,2010,Renewables,14.6
+Western Australia,2011,Coal,130.6
+Western Australia,2011,Oil,341.5
+Western Australia,2011,Gas,494.9
+Western Australia,2011,Renewables,15.3
+Western Australia,2012,Coal,125
+Western Australia,2012,Oil,339.5
+Western Australia,2012,Gas,503.4
+Western Australia,2012,Renewables,17
+Western Australia,2013,Coal,129.8
+Western Australia,2013,Oil,357.5
+Western Australia,2013,Gas,515.5
+Western Australia,2013,Renewables,18.8
+Western Australia,2014,Coal,136.1
+Western Australia,2014,Oil,373.5
+Western Australia,2014,Gas,536.1
+Western Australia,2014,Renewables,20.9
+Western Australia,2015,Coal,127.6
+Western Australia,2015,Oil,355.6
+Western Australia,2015,Gas,539.9
+Western Australia,2015,Renewables,22.3
+Western Australia,2016,Coal,136.4
+Western Australia,2016,Oil,403.7
+Western Australia,2016,Gas,561.9
+Western Australia,2016,Renewables,21.9
+Western Australia,2017,Coal,145.9
+Western Australia,2017,Oil,411.4
+Western Australia,2017,Gas,594.9
+Western Australia,2017,Renewables,24.8
+Western Australia,2018,Coal,136.2
+Western Australia,2018,Oil,405.2
+Western Australia,2018,Gas,643.3
+Western Australia,2018,Renewables,25
+Western Australia,2019,Coal,126.8
+Western Australia,2019,Oil,439.4
+Western Australia,2019,Gas,667.8
+Western Australia,2019,Renewables,27.3
+Western Australia,2020,Coal,119.5
+Western Australia,2020,Oil,423.8
+Western Australia,2020,Gas,692.6
+Western Australia,2020,Renewables,29.1
+Western Australia,2021,Coal,114.3
+Western Australia,2021,Oil,418.5
+Western Australia,2021,Gas,670.1
+Western Australia,2021,Renewables,35.9
+Western Australia,2022,Coal,121.1
+Western Australia,2022,Oil,422.6
+Western Australia,2022,Gas,673.1
+Western Australia,2022,Renewables,41.1
+Western Australia,2023,Coal,99.4
+Western Australia,2023,Oil,447.1
+Western Australia,2023,Gas,704.8
+Western Australia,2023,Renewables,42.2
+South Australia,2009,Coal,80.2
+South Australia,2009,Oil,120.2
+South Australia,2009,Gas,134
+South Australia,2009,Renewables,21.2
+South Australia,2010,Coal,79.7
+South Australia,2010,Oil,120.5
+South Australia,2010,Gas,119.5
+South Australia,2010,Renewables,20.4
+South Australia,2011,Coal,72.6
+South Australia,2011,Oil,119.3
+South Australia,2011,Gas,121.8
+South Australia,2011,Renewables,23.8
+South Australia,2012,Coal,60.9
+South Australia,2012,Oil,89.4
+South Australia,2012,Gas,125.2
+South Australia,2012,Renewables,24.7
+South Australia,2013,Coal,50.7
+South Australia,2013,Oil,147.4
+South Australia,2013,Gas,124.6
+South Australia,2013,Renewables,25.1
+South Australia,2014,Coal,46.7
+South Australia,2014,Oil,141
+South Australia,2014,Gas,110.1
+South Australia,2014,Renewables,29.1
+South Australia,2015,Coal,54
+South Australia,2015,Oil,163.4
+South Australia,2015,Gas,99.5
+South Australia,2015,Renewables,30.7
+South Australia,2016,Coal,52.6
+South Australia,2016,Oil,121.2
+South Australia,2016,Gas,100.6
+South Australia,2016,Renewables,31.6
+South Australia,2017,Coal,26.1
+South Australia,2017,Oil,106.6
+South Australia,2017,Gas,109.6
+South Australia,2017,Renewables,31.9
+South Australia,2018,Coal,25.9
+South Australia,2018,Oil,149
+South Australia,2018,Gas,120.4
+South Australia,2018,Renewables,37.3
+South Australia,2019,Coal,26.3
+South Australia,2019,Oil,148.8
+South Australia,2019,Gas,108.3
+South Australia,2019,Renewables,39
+South Australia,2020,Coal,24.7
+South Australia,2020,Oil,146
+South Australia,2020,Gas,103.7
+South Australia,2020,Renewables,40.9
+South Australia,2021,Coal,25.4
+South Australia,2021,Oil,143.3
+South Australia,2021,Gas,92.2
+South Australia,2021,Renewables,44.3
+South Australia,2022,Coal,25.9
+South Australia,2022,Oil,141.9
+South Australia,2022,Gas,80.2
+South Australia,2022,Renewables,48.1
+South Australia,2023,Coal,22
+South Australia,2023,Oil,144.9
+South Australia,2023,Gas,74.8
+South Australia,2023,Renewables,53
+Tasmania,2009,Coal,12.4
+Tasmania,2009,Oil,41.6
+Tasmania,2009,Gas,11.2
+Tasmania,2009,Renewables,37.1
+Tasmania,2010,Coal,11.5
+Tasmania,2010,Oil,41.5
+Tasmania,2010,Gas,13.6
+Tasmania,2010,Renewables,40
+Tasmania,2011,Coal,10.1
+Tasmania,2011,Oil,39.2
+Tasmania,2011,Gas,17.7
+Tasmania,2011,Renewables,43.1
+Tasmania,2012,Coal,8.9
+Tasmania,2012,Oil,38.1
+Tasmania,2012,Gas,16.2
+Tasmania,2012,Renewables,39.8
+Tasmania,2013,Coal,12
+Tasmania,2013,Oil,38.5
+Tasmania,2013,Gas,17.7
+Tasmania,2013,Renewables,48.5
+Tasmania,2014,Coal,11
+Tasmania,2014,Oil,38.2
+Tasmania,2014,Gas,12.4
+Tasmania,2014,Renewables,54.2
+Tasmania,2015,Coal,11.3
+Tasmania,2015,Oil,37.9
+Tasmania,2015,Gas,6.6
+Tasmania,2015,Renewables,41.3
+Tasmania,2016,Coal,9.7
+Tasmania,2016,Oil,38.1
+Tasmania,2016,Gas,12.9
+Tasmania,2016,Renewables,40.9
+Tasmania,2017,Coal,10.7
+Tasmania,2017,Oil,37
+Tasmania,2017,Gas,13.2
+Tasmania,2017,Renewables,41.9
+Tasmania,2018,Coal,10.5
+Tasmania,2018,Oil,38.1
+Tasmania,2018,Gas,13.9
+Tasmania,2018,Renewables,45.9
+Tasmania,2019,Coal,10
+Tasmania,2019,Oil,40.3
+Tasmania,2019,Gas,10.6
+Tasmania,2019,Renewables,46.6
+Tasmania,2020,Coal,8.3
+Tasmania,2020,Oil,37.3
+Tasmania,2020,Gas,7.4
+Tasmania,2020,Renewables,47.4
+Tasmania,2021,Coal,8.1
+Tasmania,2021,Oil,40
+Tasmania,2021,Gas,7.3
+Tasmania,2021,Renewables,43.4
+Tasmania,2022,Coal,8.8
+Tasmania,2022,Oil,39.9
+Tasmania,2022,Gas,7.1
+Tasmania,2022,Renewables,48.4
+Tasmania,2023,Coal,8.8
+Tasmania,2023,Oil,39.5
+Tasmania,2023,Gas,7.2
+Tasmania,2023,Renewables,43.9
+Northern Territory,2009,Coal,0
+Northern Territory,2009,Oil,54.8
+Northern Territory,2009,Gas,39.9
+Northern Territory,2009,Renewables,0.4
+Northern Territory,2010,Coal,0
+Northern Territory,2010,Oil,51.9
+Northern Territory,2010,Gas,42
+Northern Territory,2010,Renewables,0.5
+Northern Territory,2011,Coal,0
+Northern Territory,2011,Oil,54.9
+Northern Territory,2011,Gas,44.1
+Northern Territory,2011,Renewables,0.5
+Northern Territory,2012,Coal,0
+Northern Territory,2012,Oil,55.7
+Northern Territory,2012,Gas,42
+Northern Territory,2012,Renewables,0.5
+Northern Territory,2013,Coal,0
+Northern Territory,2013,Oil,54.2
+Northern Territory,2013,Gas,45.3
+Northern Territory,2013,Renewables,0.5
+Northern Territory,2014,Coal,0
+Northern Territory,2014,Oil,51.2
+Northern Territory,2014,Gas,47.4
+Northern Territory,2014,Renewables,0.6
+Northern Territory,2015,Coal,0
+Northern Territory,2015,Oil,38.4
+Northern Territory,2015,Gas,44.9
+Northern Territory,2015,Renewables,0.6
+Northern Territory,2016,Coal,0
+Northern Territory,2016,Oil,33.4
+Northern Territory,2016,Gas,49.8
+Northern Territory,2016,Renewables,0.7
+Northern Territory,2017,Coal,0
+Northern Territory,2017,Oil,34.4
+Northern Territory,2017,Gas,48.1
+Northern Territory,2017,Renewables,0.8
+Northern Territory,2018,Coal,0
+Northern Territory,2018,Oil,42.3
+Northern Territory,2018,Gas,46.9
+Northern Territory,2018,Renewables,1
+Northern Territory,2019,Coal,0
+Northern Territory,2019,Oil,45.8
+Northern Territory,2019,Gas,86.1
+Northern Territory,2019,Renewables,1.1
+Northern Territory,2020,Coal,0
+Northern Territory,2020,Oil,36.5
+Northern Territory,2020,Gas,108.7
+Northern Territory,2020,Renewables,1.3
+Northern Territory,2021,Coal,0
+Northern Territory,2021,Oil,37.6
+Northern Territory,2021,Gas,106.2
+Northern Territory,2021,Renewables,1.5
+Northern Territory,2022,Coal,0
+Northern Territory,2022,Oil,37.6
+Northern Territory,2022,Gas,110.6
+Northern Territory,2022,Renewables,1.6
+Northern Territory,2023,Coal,0
+Northern Territory,2023,Oil,36.6
+Northern Territory,2023,Gas,91.3
+Northern Territory,2023,Renewables,1.7
