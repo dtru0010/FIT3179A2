@@ -1,0 +1,131 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "The Australian Primary Energy Consumption (PJ) by Fuel",
+    "width": 800,
+    "height": 450,
+    "data": {
+      "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/data/primary_fuel_energy_consumption_state.csv"
+    },
+    "params": [
+      {
+        "name": "Date_selection",
+        "value": "2022-23",
+        "bind": {
+          "input": "select",
+          "options": [
+            "2008-09",
+            "2009-10",
+            "2010-11",
+            "2011-12",
+            "2012-13",
+            "2013-14",
+            "2014-15",
+            "2015-16",
+            "2016-17",
+            "2018-19",
+            "2019-20",
+            "2020-21",
+            "2021-22",
+            "2022-23"
+          ],
+          "labels": [
+            "2008-09",
+            "2009-10",
+            "2010-11",
+            "2011-12",
+            "2012-13",
+            "2013-14",
+            "2014-15",
+            "2015-16",
+            "2016-17",
+            "2018-19",
+            "2019-20",
+            "2020-21",
+            "2021-22",
+            "2022-23"
+          ],
+          "name": "Date selection: "
+        }
+      }
+    ],
+    "transform": [
+      {
+        "filter": "datum.Year == Date_selection"
+      }
+    ],
+        "encoding": {
+          "x": {
+            "field": "State",
+            "type": "nominal",
+            "title": "States"        
+          },
+          "y": {
+            "aggregate": "sum",
+            "field": "Energy_Amount",
+            "type": "quantitative",
+            "title": "Amount of Energy Consumed (PJ)"
+          },
+          "color": {
+            "field": "Primary_Fuel",
+            "type": "nominal",
+            "title": "Primary Fuel"
+          }
+        },
+    "layer": [
+      {
+        "mark": {
+          "type": "bar"
+        },
+        "encoding": {
+          "tooltip": [
+            {
+              "field": "State", 
+              "type": "nominal",
+              "title": "State"
+            },
+            {
+              "field": "Primary_Fuel", 
+              "type": "nominal",
+              "title": "Fuel Type"
+            },
+            {
+              "field": "Energy_Amount",
+              "type": "quantitative",
+              "title": "Energy Consumed (PJ)"
+            }
+          ]
+        }
+      },
+      {
+        "transform": [
+          {
+            "aggregate": [
+              {
+                "op": "sum",
+                "field": "Energy_Amount",
+                "as": "total"
+              }
+            ],
+            "groupby": ["State"]
+          }
+        ],
+        "mark": {
+          "type": "text",
+          "dy": -10
+        },
+        "encoding": {
+          "text": {
+            "field": "total",
+            "type": "quantitative"
+          },
+          "y": {
+            "field": "total"
+          },
+          "color": {
+            "value": "black"
+          }
+        }
+
+      }
+    ]
+  }
