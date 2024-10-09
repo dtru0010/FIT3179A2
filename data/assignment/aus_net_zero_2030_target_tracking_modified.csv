@@ -1,4 +1,4 @@
-﻿Category,Year,Emmisions
+﻿Category,Year,Emissions
 2030 Target,2030,351.29
 2050 Target,2050,0
 Baseline,2023,465.23
@@ -14,17 +14,17 @@ Baseline,2032,359.16
 Baseline,2033,338.62
 Baseline,2034,327.81
 Baseline,2035,312.7
-Emmisions Budget Trajectory,2020,538.04
-Emmisions Budget Trajectory,2021,519.37
-Emmisions Budget Trajectory,2022,500.69
-Emmisions Budget Trajectory,2023,482.01
-Emmisions Budget Trajectory,2024,463.34
-Emmisions Budget Trajectory,2025,444.66
-Emmisions Budget Trajectory,2026,425.99
-Emmisions Budget Trajectory,2027,407.31
-Emmisions Budget Trajectory,2028,388.64
-Emmisions Budget Trajectory,2029,369.96
-Emmisions Budget Trajectory,2030,351.29
+Emissions Budget Trajectory,2020,538.04
+Emissions Budget Trajectory,2021,519.37
+Emissions Budget Trajectory,2022,500.69
+Emissions Budget Trajectory,2023,482.01
+Emissions Budget Trajectory,2024,463.34
+Emissions Budget Trajectory,2025,444.66
+Emissions Budget Trajectory,2026,425.99
+Emissions Budget Trajectory,2027,407.31
+Emissions Budget Trajectory,2028,388.64
+Emissions Budget Trajectory,2029,369.96
+Emissions Budget Trajectory,2030,351.29
 Historical Emissions,2000,566.36
 Historical Emissions,2001,586.64
 Historical Emissions,2002,582.52
