@@ -1,8 +1,12 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Title",
-    "width": 800,
-    "height": 450,
+    "title": {
+      "text": "Energy Mix over Time",
+      "fontSize": 14,
+      "dx": -118
+    },
+    "width": 380,
+    "height": 200,
     "data": {
       "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_energy_mix_portions.csv",
       "format": {"type": "csv"}
@@ -19,7 +23,7 @@
     ],
     "transform": [
       {
-        "calculate": "if(datum.Fuel_Type == 'Oil', 0, if(datum.Fuel_Type == 'Coal', 1, if(datum.Fuel_Type == 'Gas', 2, 3)))",
+        "calculate": "if(datum.Fuel_Type == 'Oil', 0, if(datum.Fuel_Type == 'Coal ', 1, if(datum.Fuel_Type == 'Gas', 2, 3)))",
         "as": "fuel_order"
       }
     ],
@@ -29,7 +33,8 @@
         "type": "nominal",
         "title": "Year",
         "axis": {
-          "labelAngle": 45
+          "labelAngle": 45,
+          "title": null
         }
       },
       "y": {
@@ -43,7 +48,11 @@
       "color": {
         "field": "Fuel_Type",
         "type": "nominal",
-        "title": "Fuel Type"
+        "title": "Fuel Type",
+        "scale": {
+              "domain": ["Renewables", "Gas", "Coal ", "Oil"],
+              "range": ["#f2cf5b","#d6a5c9","#4c78a8","#f58518"]
+            }
       },
       "order": {"field": "fuel_order"}
     },

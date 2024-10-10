@@ -1,8 +1,12 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Title",
-    "width": 800,
-    "height": 450,
+    "title": {
+      "text": "Emission Projection Tracking against the 2030 Target",
+      "fontSize": 14,
+      "dx": 14
+    },
+    "width": 325,
+    "height": 200,
     "layer": [
       {
         "data": {
@@ -28,10 +32,10 @@
           "x": {
             "field": "Year",
             "type": "quantitative",
-            "title": "Year",
             "axis": {
               "labelAngle": 45,
-              "format": "d"
+              "format": "d",
+              "title": null
             }
           },
           "y": {
@@ -53,7 +57,7 @@
             {
               "field": "Year",
               "type": "nominal",
-            "title": "Year:"
+              "title": "Year:"
             },
             {
               "field": "Emissions",
@@ -81,7 +85,6 @@
           "x": {
             "field": "Year",
             "type": "quantitative",
-            "title": "Year",
             "axis": {
               "labelAngle": 45,
               "format": "d"
@@ -127,9 +130,9 @@
         },
         "mark": {
           "type": "text",
-          "dy": -20,
-          "dx": -100,
-          "size": 20
+          "dy": -10,
+          "dx": -60,
+          "size": 12
           },
         "transform": [
           {"filter": "datum.Category == '2050 Target'"}
@@ -159,8 +162,8 @@
         "mark": {
           "type": "text",
           "dy": -10,
-          "dx": -120,
-          "size": 20
+          "dx": -80,
+          "size": 12
           },
         "transform": [
           {"filter": "datum.Category == '2030 Target'"}
@@ -192,14 +195,14 @@
           "type": "text",
           "dx": 5,
           "dy": 10,
-          "size": 20
+          "size": 12
           },
         "transform": [
           {"filter": "datum.Year == '2030' && datum.Emissions == 357.52"}
         ],
         "encoding": {
           "text": {
-            "value":["\\","I","I","I","I","I","With Additional Measures", "Scenario - 42% below", " 2005 levels (2030)"]
+            "value":["\\","I","I","With Additional Measures", "Scenario - 42% below", " 2005 levels (2030)"]
           },
           "x": {
             "field": "Year",
@@ -222,16 +225,16 @@
         
         "mark": {
           "type": "text",
-          "dx": 110,
+          "dx": 60,
           "dy": -40,
-          "size": 20
+          "size": 12
           },
         "transform": [
           {"filter": "datum.Year == '2030' && datum.Emissions == 386.04"}
         ],
         "encoding": {
           "text": {
-            "value": ["Baseline Scenario - 37%", "below 2005 levels (2030)"]
+            "value": ["Baseline Scenario - 37%", "below 2005", "levels (2030)"]
           },
           "x": {
             "field": "Year",

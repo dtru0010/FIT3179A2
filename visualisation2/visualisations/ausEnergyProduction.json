@@ -1,15 +1,19 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Title",
-  "width": 800,
-  "height": 450,
+  "title": {
+    "text": "Energy Production by Fuel Type",
+    "fontSize": 14,
+    "dx": -63
+  },
+  "width": 340,
+  "height": 200,
   "encoding": {
     "x": {
           "field": "Year",
           "type": "ordinal",
-          "title": "Year",
           "axis": {
-            "labelAngle": 45
+            "labelAngle": 45,
+            "title": null
           }
         }
   },
@@ -36,7 +40,8 @@
           "type": "nominal",
           "title": "Fuel Type",
           "scale": {
-            "domain": ["LPG", "Renewables", "Brown Coal", "Crude Oil + NGL", "Natural Gas", "Black Coal"]
+            "domain": ["LPG", "Renewables", "Brown Coal", "Crude Oil + NGL", "Natural Gas", "Black Coal"],
+            "range": ["#8452bd","#f2cf5b","#9ecae9","#f58518","#d6a5c9","#4c78a8"]
           }
         },
         "order": {"field": "fuel_order"}

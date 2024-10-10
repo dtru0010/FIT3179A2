@@ -1,10 +1,24 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Title",
+    "title": {
+      "text": "Share of Energy based on Fuel Type",
+      "fontSize": 17
+    },
     "width": 800,
     "height": 450,
     "projection": {"type": "equalEarth"},
     "params": [
+      {
+        "name": "year_selection",
+        "value": 2023,
+        "bind": {
+          "input": "range",
+          "min": 2000,
+          "max": 2023,
+          "step": 1,
+          "name": "Year Selected:"
+        }
+      },
       {
         "name": "fuel_selection",
         "value": "Coal",
@@ -23,17 +37,6 @@
             "Renewables"
           ],
           "name": "Fuel Type:"
-        }
-      },
-      {
-        "name": "year_selection",
-        "value": 2023,
-        "bind": {
-          "input": "range",
-          "min": 2000,
-          "max": 2023,
-          "step": 1,
-          "name": "Year Selected:"
         }
       }
     ],

@@ -1,8 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Title",
-  "width": 800,
-  "height": 450,
+  "title": {
+    "text": "Energy Consumption by Fuel Type",
+    "fontSize": 15,
+    "dx": -57
+  },
+  "width": 360,
+  "height": 200,
   "data": {
     "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_energy_consum_by_fuel_state.csv",
     "format": {"type": "csv"}
@@ -46,9 +50,9 @@
       "x": {
         "field": "Year",
         "type": "nominal",
-        "title": "Year",
         "axis": {
-          "labelAngle": 45
+          "labelAngle": 45,
+          "title": null
         }
       }
     },
@@ -71,7 +75,8 @@
             "type": "nominal",
             "title": "Fuel Type",
             "scale": {
-              "domain": ["Renewables", "Gas", "Coal", "Oil"]
+              "domain": ["Renewables", "Gas", "Coal", "Oil"],
+              "range": ["#f2cf5b","#d6a5c9","#4c78a8","#f58518"]
             }
           },
           "order": {"field": "fuel_order"}
