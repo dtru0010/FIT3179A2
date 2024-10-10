@@ -40,7 +40,7 @@
     "layer": [
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/data/assignment/oceans.json",
+          "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/oceans.json",
           "format": {
             "type": "topojson",
             "feature": "oceans"
@@ -53,7 +53,7 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/data/assignment/ne_110m.json",
+          "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/ne_110m.json",
           "format": {
             "type": "topojson",
             "feature": "ne_110m_graticules_30"
@@ -68,7 +68,7 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/data/assignment/ne_110m.json",
+          "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/ne_110m.json",
           "format": {
             "type": "topojson",
             "feature": "ne_110m_admin_0_countries"
@@ -100,7 +100,7 @@
             "lookup": "Code",
             "from": {
               "data": {
-                "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/data/assignment/ne_110m.json",
+                "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/ne_110m.json",
                 "format": {
                   "type": "topojson",
                   "feature": "ne_110m_admin_0_countries"
