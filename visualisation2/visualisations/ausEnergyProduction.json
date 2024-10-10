@@ -16,7 +16,7 @@
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/data/assignment/aus_energy_production_by_fuel.csv",
+        "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_energy_production_by_fuel.csv",
         "format": {"type": "csv"}
       },
       "transform": [
@@ -45,7 +45,7 @@
     },
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/data/assignment/aus_energy_production_by_fuel.csv",
+        "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_energy_production_by_fuel.csv",
         "format": {"type": "csv"}
       },
       "params": [

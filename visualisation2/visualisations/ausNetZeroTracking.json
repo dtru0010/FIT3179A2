@@ -6,7 +6,7 @@
     "layer": [
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/data/assignment/aus_net_zero_2030_target_tracking_modified.csv",
+          "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_net_zero_2030_target_tracking_modified.csv",
           "format": {"type": "csv"}
         },
         "params": [
@@ -70,7 +70,7 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/data/assignment/aus_net_zero_2030_target_tracking_modified.csv",
+          "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_net_zero_2030_target_tracking_modified.csv",
           "format": {"type": "csv"}
         },
         "mark": {"type": "circle"},
@@ -122,7 +122,7 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/data/assignment/aus_net_zero_2030_target_tracking_modified.csv",
+          "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_net_zero_2030_target_tracking_modified.csv",
           "format": {"type": "csv"}
         },
         "mark": {
@@ -153,7 +153,7 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/data/assignment/aus_net_zero_2030_target_tracking_modified.csv",
+          "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_net_zero_2030_target_tracking_modified.csv",
           "format": {"type": "csv"}
         },
         "mark": {
@@ -184,7 +184,7 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/data/assignment/aus_net_zero_2030_target_tracking_modified.csv",
+          "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_net_zero_2030_target_tracking_modified.csv",
           "format": {"type": "csv"}
         },
         
@@ -216,7 +216,7 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/data/assignment/aus_net_zero_2030_target_tracking_modified.csv",
+          "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_net_zero_2030_target_tracking_modified.csv",
           "format": {"type": "csv"}
         },
         

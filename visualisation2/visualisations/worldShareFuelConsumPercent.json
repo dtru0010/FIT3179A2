@@ -90,7 +90,7 @@
       },
       {
         "data": {
-          "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/data/assignment/world_share_fuel_consumption_percent.csv",
+          "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/world_share_fuel_consumption_percent.csv",
           "format": {"type": "csv"}
         },
         "transform": [

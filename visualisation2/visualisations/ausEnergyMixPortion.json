@@ -4,7 +4,7 @@
     "width": 800,
     "height": 450,
     "data": {
-      "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/data/assignment/aus_energy_mix_portions.csv",
+      "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_energy_mix_portions.csv",
       "format": {"type": "csv"}
     },
     "params": [
