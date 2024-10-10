@@ -1,0 +1,145 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Title",
+  "width": 800,
+  "height": 450,
+  "data": {
+    "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/data/assignment/aus_energy_consum_by_fuel_state.csv",
+    "format": {"type": "csv"}
+  },
+    "params": [
+      {
+        "name": "state_selection",
+        "value": "Australia",
+        "bind": {
+          "input": "select",
+          "options": [
+            "Australia",
+            "New South Wales",
+            "Victoria",
+            "Queensland",
+            "Western Australia",
+            "South Australia",
+            "Tasmania",
+            "Northern Territory"
+          ],
+          "labels": [
+            "Australia",
+            "New South Wales",
+            "Victoria",
+            "Queensland",
+            "Western Australia",
+            "South Australia",
+            "Tasmania",
+            "Northern Territory"
+          ],
+          "name": "State selection: "
+        }
+      }
+    ],
+    "transform": [
+      {
+        "filter": "datum.State == state_selection"
+      }
+    ],
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "type": "nominal",
+        "title": "Year",
+        "axis": {
+          "labelAngle": 45
+        }
+      }
+    },
+    "layer": [
+      {
+        "transform": [
+          {
+            "calculate": "if(datum.Fuel_Type == 'Oil', 0, if(datum.Fuel_Type == 'Coal',   1, if(datum.Fuel_Type == 'Gas', 2, 3)))",
+            "as": "fuel_order"
+          }
+        ],
+        "encoding": {
+          "y": {
+            "field": "Energy_Unit",
+            "type": "quantitative",
+            "title": "Amount of Energy Consumed (PJ)"
+          },
+          "color": {
+            "field": "Fuel_Type",
+            "type": "nominal",
+            "title": "Fuel Type",
+            "scale": {
+              "domain": ["Renewables", "Gas", "Coal", "Oil"]
+            }
+          },
+          "order": {"field": "fuel_order"}
+        },
+        "mark": {"type": "area"}
+      },
+      {
+        "params": [
+          {
+            "name": "hover",
+            "select": {
+              "type": "point",
+              "fields": ["Year"],
+              "nearest": true,
+              "on": "pointerover",
+              "clear": "pointerout"
+            }
+          }
+        ],
+        "transform": [
+          {
+            "pivot": "Fuel_Type",
+            "value": "Energy_Unit",
+            "groupby": ["Year"]
+          }
+        ],
+        "mark": "rule",
+        "encoding": {
+          "opacity": {
+            "condition": {
+              "param": "hover",
+              "empty": false,
+              "value": 0.5
+            },
+            "value": 0
+          },
+          "tooltip": [
+            {
+              "field": "Year",
+              "type": "nominal",
+              "title": "Year:"
+            },
+            {
+              "field": "Renewables",
+              "type": "quantitative",
+              "title": "Renewables (PJ):",
+              "format": ".2f"
+            },
+            {
+              "field": "Gas",
+              "type": "quantitative",
+              "title": "Gas (PJ):",
+              "format": ".2f"
+            },
+            {
+              "field": "Coal",
+              "type": "quantitative",
+              "title": "Coal (PJ):",
+              "format": ".2f"
+            },
+            {
+              "field": "Oil",
+              "type": "quantitative",
+              "title": "Oil (PJ):",
+              "format": ".2f"
+            }
+          ]
+        }
+      }
+    ]
+  }

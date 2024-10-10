@@ -1,76 +1,125 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Title",
-    "width": 800,
-    "height": 450,
-    "data": {
-      "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/data/assignment/aus_energy_production_by_fuel.csv",
-      "format": {"type": "csv"}
-    },
-    "params": [
-      {
-        "name": "fuel_selection",
-        "select": {
-          "type": "point",
-          "fields": ["Fuel_Type"]
-        },
-        "bind": "legend"
-      }
-    ],
-    "transform": [
-      {
-        "calculate": "if(datum.Fuel_Type == 'Black Coal', 0, if(datum.Fuel_Type == 'Natural Gas', 1, if(datum.Fuel_Type == 'Crude Oil + NGL', 3, if(datum.Fuel_Type == 'Brown Coal', 4, if(datum.Fuel_Type == 'Renewables', 5, 6)))))",
-        "as": "fuel_order"
-      }
-    ],
-    "encoding": {
-      "x": {
-        "field": "Year",
-        "type": "nominal",
-        "title": "Year",
-        "axis": {
-          "labelAngle": 45
-        }
-      },
-      "y": {
-        "field": "Energy_Unit",
-        "type": "quantitative",
-        "title": "Amount of Energy Produced (PJ)"
-      },
-      "color": {
-        "field": "Fuel_Type",
-        "type": "nominal",
-        "title": "Fuel Type"
-      },
-      "order": {"field": "fuel_order"}
-    },
-    "layer": [
-      {
-        "mark": {"type": "area"},
-        "encoding": {
-          "tooltip": [
-            {
-              "field":"Fuel_Type",
-              "type": "nominal",
-              "title": "Fuel Type:"
-            },
-            {
-              "field": "Year",
-              "type": "nominal",
-              "title": "Year:"
-            },
-            {
-              "field": "Energy_Unit",
-              "type": "quantitative",
-              "title": "Energy Produced (PJ):",
-              "format": ".2f"
-            }
-          ],
-          "opacity": {
-            "condition": {"param": "fuel_selection", "value": 1},
-            "value": 0.2
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Title",
+  "width": 800,
+  "height": 450,
+  "encoding": {
+    "x": {
+          "field": "Year",
+          "type": "ordinal",
+          "title": "Year",
+          "axis": {
+            "labelAngle": 45
           }
         }
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/data/assignment/aus_energy_production_by_fuel.csv",
+        "format": {"type": "csv"}
+      },
+      "transform": [
+        {
+          "calculate": "if(datum.Fuel_Type == 'Black Coal', 0, if(datum.Fuel_Type == 'Natural Gas', 1, if(datum.Fuel_Type == 'Crude Oil + NGL', 3, if(datum.Fuel_Type == 'Brown Coal', 4, if(datum.Fuel_Type == 'Renewables', 5, 6)))))",
+          "as": "fuel_order"
+        }
+      ],
+      "encoding": {
+        "y": {
+          "field": "Energy_Unit",
+          "type": "quantitative",
+          "title": "Amount of Energy Produced (PJ)"
+        },
+        "color": {
+          "field": "Fuel_Type",
+          "type": "nominal",
+          "title": "Fuel Type",
+          "scale": {
+            "domain": ["LPG", "Renewables", "Brown Coal", "Crude Oil + NGL", "Natural Gas", "Black Coal"]
+          }
+        },
+        "order": {"field": "fuel_order"}
+      },
+      "mark": {"type": "area"}
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/data/assignment/aus_energy_production_by_fuel.csv",
+        "format": {"type": "csv"}
+      },
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": ["Year"],
+            "nearest": true,
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ],
+      "transform": [
+        {
+          "pivot": "Fuel_Type",
+          "value": "Energy_Unit",
+          "groupby": ["Year"]
+        }
+      ],
+      "mark": "rule",
+      "encoding": {
+        "opacity": {
+          "condition": {
+            "param": "hover",
+            "empty": false,
+            "value": 0.5
+          },
+          "value": 0
+        },
+        "tooltip": [
+          {
+            "field": "Year",
+            "type": "ordinal"
+          },
+          {
+            "field": "LPG",
+            "type": "quantitative",
+            "title": "LPG (PJ)",
+            "format": ".2f"
+          },
+          {
+            "field": "Renewables",
+            "type": "quantitative",
+            "title": "Renewables (PJ)",
+            "format": ".2f"
+          },
+          {
+            "field": "Brown Coal",
+            "type": "quantitative",
+            "title": "Brown Coal (PJ)",
+            "format": ".2f"
+          },
+          {
+            "field": "Crude Oil + NGL",
+            "type": "quantitative",
+            "title": "Crude Oil + NGL (PJ)",
+            "format": ".2f"
+          },
+          {
+            "field": "Natural Gas",
+            "type": "quantitative",
+            "title": "Natural Gas (PJ)",
+            "format": ".2f"
+          },
+          {
+            "field": "Black Coal",
+            "type": "quantitative",
+            "title": "Black Coal (PJ)",
+            "format": ".2f"
+          }
+        ]
       }
-    ]
-  }
+    }
+  ]
+}
