@@ -1,88 +1,119 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {
-      "text": "Energy Mix over Time",
-      "fontSize": 14,
-      "dx": -118
-    },
-    "width": 380,
-    "height": 200,
-    "data": {
-      "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_energy_mix_portions.csv",
-      "format": {"type": "csv"}
-    },
-    "params": [
-      {
-        "name": "fuel_selection",
-        "select": {
-          "type": "point",
-          "fields": ["Fuel_Type"]
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Energy Mix over Time",
+    "fontSize": 14,
+    "dx": -118
+  },
+  "width": 380,
+  "height": 200,
+  "data": {
+    "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_energy_mix_portions.csv",
+    "format": {"type": "csv"}
+  },
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "nominal",
+      "title": "Year",
+      "axis": {
+        "labelAngle": 45,
+        "title": null
+      }
+    }
+  },
+  "transform": [
+    {
+      "calculate": "if(datum.Fuel_Type == 'Oil', 0, if(datum.Fuel_Type == 'Coal ', 1, if(datum.Fuel_Type == 'Gas', 2, 3)))",
+      "as": "fuel_order"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {"type": "area"},
+      "encoding": {
+        "y": {
+          "field": "Portion",
+          "type": "quantitative",
+          "title": "Percent",
+          "scale": {
+            "domainMax": 100
+          }
         },
-        "bind": "legend"
+        "color": {
+          "field": "Fuel_Type",
+          "type": "nominal",
+          "title": "Fuel Type",
+          "scale": {
+            "domain": ["Renewables", "Gas", "Coal ", "Oil"],
+            "range": ["#f2cf5b","#d6a5c9","#4c78a8","#f58518"]
+          }
+        },
+        "order": {"field": "fuel_order"} 
       }
-    ],
-    "transform": [
-      {
-        "calculate": "if(datum.Fuel_Type == 'Oil', 0, if(datum.Fuel_Type == 'Coal ', 1, if(datum.Fuel_Type == 'Gas', 2, 3)))",
-        "as": "fuel_order"
-      }
-    ],
-    "encoding": {
-      "x": {
-        "field": "Year",
-        "type": "nominal",
-        "title": "Year",
-        "axis": {
-          "labelAngle": 45,
-          "title": null
-        }
-      },
-      "y": {
-        "field": "Portion",
-        "type": "quantitative",
-        "title": "Percent",
-        "scale": {
-          "domainMax": 100
-        }
-      },
-      "color": {
-        "field": "Fuel_Type",
-        "type": "nominal",
-        "title": "Fuel Type",
-        "scale": {
-              "domain": ["Renewables", "Gas", "Coal ", "Oil"],
-              "range": ["#f2cf5b","#d6a5c9","#4c78a8","#f58518"]
-            }
-      },
-      "order": {"field": "fuel_order"}
     },
-    "layer": [
-      {
-        "mark": {"type": "area"},
-        "encoding": {
-          "tooltip": [
-            {
-              "field":"Fuel_Type",
-              "type": "nominal",
-              "title": "Fuel Type:"
-            },
-            {
-              "field": "Year",
-              "type": "nominal",
-              "title": "Year:"
-            },
-            {
-              "field": "Portion",
-              "type": "quantitative",
-              "title": "Energy Mix Portion (%):",
-              "format": ".2f"
-            }
-          ],
-          "opacity": {
-            "condition": {"param": "fuel_selection", "value": 1},
-            "value": 0.2
+    {
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "fields": ["Year"],
+            "nearest": true,
+            "on": "pointerover",
+            "clear": "pointerout"
           }
         }
+      ],
+      "transform": [
+        {
+          "pivot": "Fuel_Type",
+          "value": "Portion",
+          "groupby": ["Year"]
+        }
+      ],
+      "mark": "rule",
+      "encoding": {
+        "opacity": {
+          "condition": {
+            "param": "hover",
+            "empty": false,
+            "value": 0.5
+          },
+          "value": 0
+        },
+        "tooltip": [
+          {
+            "field": "Year",
+            "type": "nominal",
+            "title": "Year:"
+          },
+          {
+            "field": "Renewables",
+            "type": "quantitative",
+            "title": "Renewables (%):",
+            "format": ".2f"
+          },
+          {
+            "field": "Gas",
+            "type": "quantitative",
+            "title": "Gas (%):",
+            "format": ".2f"
+          },
+          {
+            "field": "Coal ",
+            "type": "quantitative",
+            "title": "Coal (%):",
+            "format": ".2f"
+          },
+          {
+            "field": "Oil",
+            "type": "quantitative",
+            "title": "Oil (%):",
+            "format": ".2f"
+          }
+        ]
       }
-    ]
-  }
+    }
+  ]
+}
