@@ -4,8 +4,8 @@
       "text": "Global Share of Energy Consumption originating based on Fuel Type",
       "fontSize": 17
     },
-    "width": 800,
-    "height": 450,
+    "width": 1000,
+    "height": 500,
     "background": "#FDFBF9",
     "view": {"fill": "#FDFBF9"},
     "projection": {"type": "equirectangular"},
@@ -113,7 +113,7 @@
           "color": {
             "field": "Share_Percent",
             "type": "quantitative",
-            "title": "Share (%)",
+            "title": "Consumption Share (%)",
             "scale": {
               "domainMin": 0,
               "domainMax": 100,
@@ -126,6 +126,11 @@
                 "#bd0026",
                 "#800026"
               ]
+            },
+            "legend": {
+              "orient": "bottom-left",
+              "direction": "vertical",
+              "offset": 20
             }
           },
           "tooltip": [
@@ -147,7 +152,7 @@
             {
               "field": "Share_Percent",
               "type": "quantitative",
-              "title": "Share (%):",
+              "title": "Consumption Share (%):",
               "format": ".2f"
             }
           ]
