@@ -20,41 +20,61 @@
 
     <!-- Import CSS file -->
     <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+
+    <!-- Import custom font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="page">
         <div class="content">
             <!-- Title -->
+            <div class="title">
+                <h1>The Australian Energy Market</h1>
+            </div>
             <div class="pure-g">
                 <div class="pure-u-1-1">
-                    <div class="title">
-                        <h1>The Australian Energy Market</h1>
-                    </div>
                     <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Mattis donec neque metus suscipit ipsum quis? Urna donec nec nunc ultrices platea eu parturient, ultrices ex. Dolor feugiat litora dapibus sapien primis per eros nullam. Dui tincidunt non conubia vitae tristique aenean. Tempus sodales euismod porta sodales odio ullamcorper laoreet. Sodales ligula ultricies feugiat; luctus mus a auctor. Fusce imperdiet velit, iaculis sed phasellus placerat turpis urna arcu. Efficitur mollis cubilia leo fames neque class.</p>
                 </div>
             </div>
+
+            <br>
 
             <!-- Production & Consumption -->
             <h2>Energy Production & Consumption</h2>
             <div class="pure-g">
                 <div class="pure-u-1-2">
-                    <p style="width: 450px;">Lorem ipsum odor amet, consectetuer adipiscing elit. Mattis donec neque metus suscipit ipsum quis? Urna donec nec nunc ultrices platea eu parturient, ultrices ex. Dolor feugiat litora dapibus sapien primis per eros nullam. Dui tincidunt non conubia vitae tristique aenean. Tempus sodales euismod porta sodales odio ullamcorper laoreet. Sodales ligula ultricies feugiat; luctus mus a auctor. Fusce imperdiet velit, iaculis sed phasellus placerat turpis urna arcu. Efficitur mollis cubilia leo fames neque class.</p>
-                </div>
-                <div class="pure-u-1-2">
                     <div id="production"></div>
+                </div>
+                <div class="pure-u-1-2" style="text-align: center;">
+                    <div id="consumption" style="margin-left: 25px;"></div>
                 </div>
             </div>
 
             <div class="pure-g">
                 <div class="pure-u-1-2">
-                    <p style="width: 450px;">Lorem ipsum odor amet, consectetuer adipiscing elit. Mattis donec neque metus suscipit ipsum quis? Urna donec nec nunc ultrices platea eu parturient, ultrices ex. Dolor feugiat litora dapibus sapien primis per eros nullam. Dui tincidunt non conubia vitae tristique aenean. Tempus sodales euismod porta sodales odio ullamcorper laoreet. Sodales ligula ultricies feugiat; luctus mus a auctor. Fusce imperdiet velit, iaculis sed phasellus placerat turpis urna arcu. Efficitur mollis cubilia leo fames neque class.</p>
+                    <p style="width: 475px;">Lorem ipsum odor amet, consectetuer adipiscing elit. Mattis donec neque metus suscipit ipsum quis? Urna donec nec nunc ultrices platea eu parturient, ultrices ex. Dolor feugiat litora dapibus sapien primis per eros nullam. Dui tincidunt non conubia vitae tristique aenean. Tempus sodales euismod porta sodales odio ullamcorper laoreet. Sodales ligula ultricies feugiat; luctus mus a auctor. Fusce imperdiet velit, iaculis sed phasellus placerat turpis urna arcu. Efficitur mollis cubilia leo fames neque class.</p>
                 </div>
                 <div class="pure-u-1-2">
-                    <div id="consumption"></div>
+                    <p style="width: 475px; margin-left: auto;">Lorem ipsum odor amet, consectetuer adipiscing elit. Mattis donec neque metus suscipit ipsum quis? Urna donec nec nunc ultrices platea eu parturient, ultrices ex. Dolor feugiat litora dapibus sapien primis per eros nullam. Dui tincidunt non conubia vitae tristique aenean. Tempus sodales euismod porta sodales odio ullamcorper laoreet. Sodales ligula ultricies feugiat; luctus mus a auctor. Fusce imperdiet velit, iaculis sed phasellus placerat turpis urna arcu. Efficitur mollis cubilia leo fames neque class.</p>
                 </div>
             </div>
             
-            <br><br>
+            <br>
+
+            <!-- Energy Flow -->
+            <h2>Energy Flow</h2>
+            <div class="pure-g">
+                <div class="pure-u-1-1">
+                    <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Mattis donec neque metus suscipit ipsum quis? Urna donec nec nunc ultrices platea eu parturient, ultrices ex. Dolor feugiat litora dapibus sapien primis per eros nullam. Dui tincidunt non conubia vitae tristique aenean. Tempus sodales euismod porta sodales odio ullamcorper laoreet. Sodales ligula ultricies feugiat; luctus mus a auctor. Fusce imperdiet velit, iaculis sed phasellus placerat turpis urna arcu. Efficitur mollis cubilia leo fames neque class.</p>
+                </div>
+                <div class="pure-u-1-1" style="display: flex; justify-content: center; align-items: center; text-align: center;">
+                    <div id="flow"></div>
+                </div>
+            </div>
+
+            <br>
 
             <!-- Road to Net Zero -->
             <h2>Road to Net Zero</h2>
@@ -63,30 +83,44 @@
                     <div id="netzero"></div>
                 </div>
                 <div class="pure-u-1-2">
-                    <p style="width: 450px;  margin-left: auto;">Lorem ipsum odor amet, consectetuer adipiscing elit. Mattis donec neque metus suscipit ipsum quis? Urna donec nec nunc ultrices platea eu parturient, ultrices ex. Dolor feugiat litora dapibus sapien primis per eros nullam. Dui tincidunt non conubia vitae tristique aenean. Tempus sodales euismod porta sodales odio ullamcorper laoreet. Sodales ligula ultricies feugiat; luctus mus a auctor. Fusce imperdiet velit, iaculis sed phasellus placerat turpis urna arcu. Efficitur mollis cubilia leo fames neque class.</p>
+                    <div id="mix" style="margin-left: 25px;"></div>
                 </div>
             </div>
             
             <div class="pure-g">
                 <div class="pure-u-1-2">
-                    <div id="mix"></div>
+                    <p style="width: 475px;">Lorem ipsum odor amet, consectetuer adipiscing elit. Mattis donec neque metus suscipit ipsum quis? Urna donec nec nunc ultrices platea eu parturient, ultrices ex. Dolor feugiat litora dapibus sapien primis per eros nullam. Dui tincidunt non conubia vitae tristique aenean. Tempus sodales euismod porta sodales odio ullamcorper laoreet. Sodales ligula ultricies feugiat; luctus mus a auctor. Fusce imperdiet velit, iaculis sed phasellus placerat turpis urna arcu. Efficitur mollis cubilia leo fames neque class.</p>
                 </div>
                 <div class="pure-u-1-2">
-                    <p style="width: 450px; margin-left: auto;">Lorem ipsum odor amet, consectetuer adipiscing elit. Mattis donec neque metus suscipit ipsum quis? Urna donec nec nunc ultrices platea eu parturient, ultrices ex. Dolor feugiat litora dapibus sapien primis per eros nullam. Dui tincidunt non conubia vitae tristique aenean. Tempus sodales euismod porta sodales odio ullamcorper laoreet. Sodales ligula ultricies feugiat; luctus mus a auctor. Fusce imperdiet velit, iaculis sed phasellus placerat turpis urna arcu. Efficitur mollis cubilia leo fames neque class.</p>
+                    <p style="width: 475px; margin-left: auto;">Lorem ipsum odor amet, consectetuer adipiscing elit. Mattis donec neque metus suscipit ipsum quis? Urna donec nec nunc ultrices platea eu parturient, ultrices ex. Dolor feugiat litora dapibus sapien primis per eros nullam. Dui tincidunt non conubia vitae tristique aenean. Tempus sodales euismod porta sodales odio ullamcorper laoreet. Sodales ligula ultricies feugiat; luctus mus a auctor. Fusce imperdiet velit, iaculis sed phasellus placerat turpis urna arcu. Efficitur mollis cubilia leo fames neque class.</p>
                 </div>
             </div>
             
-            <br><br>
+            <br>
 
             <!-- Global Comparison -->
             <h2>Global Comparison</h2>
 
             <div class="pure-g">
                 <div class="pure-u-1-1">
-                    <p">Lorem ipsum odor amet, consectetuer adipiscing elit. Mattis donec neque metus suscipit ipsum quis? Urna donec nec nunc ultrices platea eu parturient, ultrices ex. Dolor feugiat litora dapibus sapien primis per eros nullam. Dui tincidunt non conubia vitae tristique aenean. Tempus sodales euismod porta sodales odio ullamcorper laoreet. Sodales ligula ultricies feugiat; luctus mus a auctor. Fusce imperdiet velit, iaculis sed phasellus placerat turpis urna arcu. Efficitur mollis cubilia leo fames neque class.</p>
+                    <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Mattis donec neque metus suscipit ipsum quis? Urna donec nec nunc ultrices platea eu parturient, ultrices ex. Dolor feugiat litora dapibus sapien primis per eros nullam. Dui tincidunt non conubia vitae tristique aenean. Tempus sodales euismod porta sodales odio ullamcorper laoreet. Sodales ligula ultricies feugiat; luctus mus a auctor. Fusce imperdiet velit, iaculis sed phasellus placerat turpis urna arcu. Efficitur mollis cubilia leo fames neque class.</p>
                 </div>
                 <div class="pure-u-1-1" style="display: flex; justify-content: center; align-items: center; text-align: center;">
                     <div id="world"></div>
+                </div>
+            </div>
+
+            <br><br>
+
+            <!-- footer -->
+            <div class="pure-g">
+                <div class="pure-u-1-1" style="text-align: center;">
+                    <p style="font-size: small;">A visualisation by <b>Daniel Truong 33158312</b>.<br>
+                        Data provided by 
+                        <a href=https://www.energy.gov.au/publications/australian-energy-update-2024 target="_blank"><b>Australian Government (Energy)</b></a>, 
+                        <a href=https://www.dcceew.gov.au/climate-change/publications/australias-emissions-projections-2023 target="_blank"><b>Australian Government (Climate Change)</b></a> and 
+                        <a href="https://ourworldindata.org/energy-mix" target="_blank"><b>Our World in Data</b></a>.
+                    </p>
                 </div>
             </div>
         </div>

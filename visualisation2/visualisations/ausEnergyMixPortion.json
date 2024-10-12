@@ -3,10 +3,12 @@
   "title": {
     "text": "Energy Mix over Time",
     "fontSize": 14,
-    "dx": -118
+    "dx": -99
   },
-  "width": 380,
+  "width": 340,
   "height": 200,
+  "background": "#FDFBF9",
+  "view": {"fill": "#FDFBF9"},
   "data": {
     "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_energy_mix_portions.csv",
     "format": {"type": "csv"}
@@ -17,7 +19,7 @@
       "type": "nominal",
       "title": "Year",
       "axis": {
-        "labelAngle": 45,
+        "labelAngle": -45,
         "title": null
       }
     }
@@ -35,7 +37,7 @@
         "y": {
           "field": "Portion",
           "type": "quantitative",
-          "title": "Percent",
+          "title": "Portion of Consumption (%)",
           "scale": {
             "domainMax": 100
           }
@@ -46,7 +48,7 @@
           "title": "Fuel Type",
           "scale": {
             "domain": ["Renewables", "Gas", "Coal ", "Oil"],
-            "range": ["#f2cf5b","#d6a5c9","#4c78a8","#f58518"]
+            "range": ["#a1d99b","#a583cc","#4c78a8","#f2cf5b"]
           }
         },
         "order": {"field": "fuel_order"} 

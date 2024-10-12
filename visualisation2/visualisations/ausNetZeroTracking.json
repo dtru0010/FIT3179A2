@@ -1,258 +1,437 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {
-      "text": "Emission Projection Tracking against the 2030 Target",
-      "fontSize": 14,
-      "dx": 14
-    },
-    "width": 325,
-    "height": 200,
-    "layer": [
-      {
-        "data": {
-          "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_net_zero_2030_target_tracking_modified.csv",
-          "format": {"type": "csv"}
-        },
-        "params": [
-          {
-            "name": "line_selection",
-            "select": {
-              "type": "point",
-              "fields": ["Category"]
-            },
-            "bind": "legend"
-          }
-        ],
-        "transform": [
-          {"filter": "datum.Category != '2030 Target'"},
-          {"filter": "datum.Category != '2050 Target'"}
-        ],
-        "mark": {"type": "line"},
-        "encoding": {
-          "x": {
-            "field": "Year",
-            "type": "quantitative",
-            "axis": {
-              "labelAngle": 45,
-              "format": "d",
-              "title": null
-            }
-          },
-          "y": {
-            "field": "Emissions",
-            "type": "quantitative",
-            "title": "Emissions (Mt CO2-e)"
-          },
-          "color": {
-            "field": "Category",
-            "type": "nominal",
-            "title": ""
-          },
-          "tooltip": [
-            {
-              "field":"Category",
-              "type": "nominal",
-              "title": "Relational Category:"
-            },
-            {
-              "field": "Year",
-              "type": "nominal",
-              "title": "Year:"
-            },
-            {
-              "field": "Emissions",
-              "type": "quantitative",
-              "title": "Emissions (Mt CO2-e):",
-              "format": ".2f"
-            }
-          ],
-          "opacity": {
-            "condition": {"param": "line_selection", "value": 1},
-            "value": 0.2
-          }
-        }
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Emission Projection Tracking against the 2030 Target",
+    "fontSize": 14,
+    "dx": -38
+  },
+  "width": 430,
+  "height": 200,
+  "background": "#FDFBF9",
+  "view": {"fill": "#FDFBF9"},
+  "layer": [
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_net_zero_2030_target_tracking_modified.csv",
+        "format": {"type": "csv"}
       },
-      {
-        "data": {
-          "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_net_zero_2030_target_tracking_modified.csv",
-          "format": {"type": "csv"}
-        },
-        "mark": {"type": "circle"},
-        "transform": [
-          {"filter": "datum.Category == '2030 Target' || datum.Category == '2050 Target'"}
-        ],
-        "encoding": {
-          "x": {
-            "field": "Year",
-            "type": "quantitative",
-            "axis": {
-              "labelAngle": 45,
-              "format": "d"
-            }
-          },
-          "y": {
-            "field": "Emissions",
-            "type": "quantitative",
-            "title": "Emissions (Mt CO2-e)"
-          },
-          "color": {
-            "field": "Category",
-            "type": "nominal",
-            "title": ""
-          },
-          "tooltip": [
-            {
-              "field":"Category",
-              "type": "nominal",
-              "title": "Relational Category:"
-            },
-            {
-              "field": "Year",
-              "type": "nominal",
-              "title": "Year:"
-            },
-            {
-              "field": "Emissions",
-              "type": "quantitative",
-              "title": "Emissions (Mt CO2-e):",
-              "format": ".2f"
-            }
-          ],
-          "size": {
-            "value": 50
-          }
+      "params": [
+        {
+          "name": "grid",
+          "select": "interval",
+          "bind": "scales"
         }
-      },
-      {
-        "data": {
-          "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_net_zero_2030_target_tracking_modified.csv",
-          "format": {"type": "csv"}
-        },
-        "mark": {
-          "type": "text",
-          "dy": -10,
-          "dx": -60,
-          "size": 12
-          },
-        "transform": [
-          {"filter": "datum.Category == '2050 Target'"}
-        ],
-        "encoding": {
-          "text": {
-            "value": "2050 Net Zero Target"
-          },
-          "x": {
-            "field": "Year",
-            "type": "quantitative",
-            "axis": {
-              "format": "d"
-            }
-          },
-          "y": {
-            "field": "Emissions",
-            "type": "quantitative"
+      ],
+      "transform": [
+        {"filter": "datum.Category != '2030 Target'"},
+        {"filter": "datum.Category != '2050 Target'"},
+        {"filter": "datum.Category != 'Emissions Budget Trajectory'"},
+        {"filter": "datum.Category != 'Baseline'"},
+        {"filter": "datum.Category != 'With Additional Measures'"}
+      ],
+      "mark": {"type": "line", "clip": true, "strokeDash": [8, 8]},
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "quantitative",
+          "axis": {
+            "labelAngle": -45,
+            "format": "d",
+            "title": null
           }
-        }
-      },
-      {
-        "data": {
-          "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_net_zero_2030_target_tracking_modified.csv",
-          "format": {"type": "csv"}
         },
-        "mark": {
-          "type": "text",
-          "dy": -10,
-          "dx": -80,
-          "size": 12
-          },
-        "transform": [
-          {"filter": "datum.Category == '2030 Target'"}
-        ],
-        "encoding": {
-          "text": {
-            "value": ["2030 Target - 43%", "below 2005", "emission levels"]
-          },
-          "x": {
-            "field": "Year",
-            "type": "quantitative",
-            "axis": {
-              "format": "d"
-            }
-          },
-          "y": {
-            "field": "Emissions",
-            "type": "quantitative"
-          }
-        }
-      },
-      {
-        "data": {
-          "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_net_zero_2030_target_tracking_modified.csv",
-          "format": {"type": "csv"}
+        "y": {
+          "field": "Emissions",
+          "type": "quantitative",
+          "title": "Gas Emissions Produced (Mt CO2-e)"
         },
-        
-        "mark": {
-          "type": "text",
-          "dx": 5,
-          "dy": 10,
-          "size": 12
+        "color": {
+          "field": "Category",
+          "type": "nominal",
+          "title": "",
+          "scale": {
+            "domain": ["Historical Emissions", "Emissions Budget Trajectory"],
+            "range": ["#36454F", "#808080"]
           },
-        "transform": [
-          {"filter": "datum.Year == '2030' && datum.Emissions == 357.52"}
-        ],
-        "encoding": {
-          "text": {
-            "value":["\\","I","I","With Additional Measures", "Scenario - 42% below", " 2005 levels (2030)"]
-          },
-          "x": {
-            "field": "Year",
-            "type": "quantitative",
-            "axis": {
-              "format": "d"
-            }
-          },
-          "y": {
-            "field": "Emissions",
-            "type": "quantitative"
-          }
-        }
-      },
-      {
-        "data": {
-          "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_net_zero_2030_target_tracking_modified.csv",
-          "format": {"type": "csv"}
-        },
-        
-        "mark": {
-          "type": "text",
-          "dx": 60,
-          "dy": -40,
-          "size": 12
-          },
-        "transform": [
-          {"filter": "datum.Year == '2030' && datum.Emissions == 386.04"}
-        ],
-        "encoding": {
-          "text": {
-            "value": ["Baseline Scenario - 37%", "below 2005", "levels (2030)"]
-          },
-          "x": {
-            "field": "Year",
-            "type": "quantitative",
-            "axis": {
-              "format": "d"
-            }
-          },
-          "y": {
-            "field": "Emissions",
-            "type": "quantitative"
+          "legend": {
+            "symbolDash": [4,2]
           }
         }
       }
-    ],
-    "resolve": {
-      "scale": {
-        "color": "independent"
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_net_zero_2030_target_tracking_modified.csv",
+        "format": {"type": "csv"}
+      },
+      "transform": [
+        {"filter": "datum.Category != '2030 Target'"},
+        {"filter": "datum.Category != '2050 Target'"},
+        {"filter": "datum.Category != 'Historical Emissions'"},
+        {"filter": "datum.Category != 'Baseline'"},
+        {"filter": "datum.Category != 'With Additional Measures'"}
+      ],
+      "mark": {"type": "line", "clip": true, "strokeOpacity": 0.5, "strokeDash": [2, 4]},
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "quantitative",
+          "axis": {
+            "labelAngle": 45,
+            "format": "d",
+            "title": null
+          }
+        },
+        "y": {
+          "field": "Emissions",
+          "type": "quantitative",
+          "title": "Gas Emissions Produced (Mt CO2-e)"
+        },
+        "color": {
+          "field": "Category",
+          "type": "nominal",
+          "title": "",
+          "scale": {
+            "range": ["#808080"]
+          },
+          "legend": null
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_net_zero_2030_target_tracking_modified.csv",
+        "format": {"type": "csv"}
+      },
+      "transform": [
+        {"filter": "datum.Category != '2030 Target'"},
+        {"filter": "datum.Category != '2050 Target'"},
+        {"filter": "datum.Category != 'Emissions Budget Trajectory'"},
+        {"filter": "datum.Category != 'Historical Emissions'"},
+        {"filter": "datum.Category != 'Baseline'"}
+      ],
+      "mark": {"type": "line", "clip": true},
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "quantitative",
+          "axis": {
+            "labelAngle": 45,
+            "format": "d",
+            "title": null
+          }
+        },
+        "y": {
+          "field": "Emissions",
+          "type": "quantitative",
+          "title": "Gas Emissions Produced (Mt CO2-e)"
+        },
+        "color": {
+          "field": "Category",
+          "type": "nominal",
+          "title": "",
+          "scale": {
+            "domain": ["With Additional Measures", "Baseline"],
+            "range": ["#87d4de", "#6be36b"]
+          }
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_net_zero_2030_target_tracking_modified.csv",
+        "format": {"type": "csv"}
+      },
+      "transform": [
+        {"filter": "datum.Category != '2030 Target'"},
+        {"filter": "datum.Category != '2050 Target'"},
+        {"filter": "datum.Category != 'Emissions Budget Trajectory'"},
+        {"filter": "datum.Category != 'Historical Emissions'"},
+        {"filter": "datum.Category != 'With Additional Measures'"}
+      ],
+      "mark": {"type": "line", "clip": true},
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "quantitative",
+          "axis": {
+            "labelAngle": 45,
+            "format": "d",
+            "title": null
+          }
+        },
+        "y": {
+          "field": "Emissions",
+          "type": "quantitative",
+          "title": "Gas Emissions Produced (Mt CO2-e)"
+        },
+        "color": {
+          "field": "Category",
+          "type": "nominal",
+          "title": "",
+          "scale": {
+            "range": ["#6be36b"]
+          },
+          "legend": null
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_net_zero_2030_target_tracking_modified.csv",
+        "format": {"type": "csv"}
+      },
+      "mark": {"type": "point", "clip": true, "filled": true, "stroke": "white"},
+      "transform": [
+        {"filter": "datum.Category == '2030 Target' || datum.Category == '2050 Target'"}
+      ],
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "quantitative",
+          "axis": {
+            "labelAngle": 45,
+            "format": "d"
+          }
+        },
+        "y": {
+          "field": "Emissions",
+          "type": "quantitative",
+          "title": "Gas Emissions Produced (Mt CO2-e)"
+        },
+        "color": {
+          "field": "Category",
+          "type": "nominal",
+          "title": "",
+          "scale": {
+            "domain": ["2030 Target", "2050 Target"],
+            "range": ["#fe9929", "#662506"]
+          },
+          "legend":null
+        },
+        "size": {
+          "value": 50
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_net_zero_2030_target_tracking_modified.csv",
+        "format": {"type": "csv"}
+      },
+      "params": [
+        {
+          "name": "hover",
+          "select": {
+            "type": "point",
+            "on": "pointerover",
+            "clear": "pointerout"
+          }
+        }
+      ],
+      "mark": {
+        "type": "circle"
+      },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "quantitative",
+          "axis": {
+            "labelAngle": 45,
+            "format": "d"
+          }
+        },
+        "y": {
+          "field": "Emissions",
+          "type": "quantitative",
+          "title": "Gas Emissions Produced (Mt CO2-e)"
+        },
+        "color": {
+          "field": "Category",
+          "type": "nominal",
+          "title": "",
+          "scale": {
+            "domain": ["2030 Target", "2050 Target", "Historical Emissions", "Emissions Budget Trajectory", "With Additional Measures", "Baseline"],
+            "range": ["#fe9929", "#662506", "#36454F", "#cccccc", "#87d4de", "#6be36b"]
+          },
+          "legend": null
+        },
+        "opacity": {
+          "condition": {
+            "test": {
+              "param": "hover",
+              "empty": false
+            },
+            "value": 1
+          },
+          "value": 0
+        },
+        "size": {
+          "condition": {
+            "test": {
+              "param": "hover",
+              "empty": false
+            },
+            "value": 48
+          },
+          "value": 100
+        },
+        "tooltip": [
+          {
+            "field":"Category",
+            "type": "nominal",
+            "title": "Category:"
+          },
+          {
+            "field": "Year",
+            "type": "nominal",
+            "title": "Year:"
+          },
+          {
+            "field": "Emissions",
+            "type": "quantitative",
+            "title": "Emissions (Mt CO2-e):",
+            "format": ".2f"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_net_zero_2030_target_tracking_modified.csv",
+        "format": {"type": "csv"}
+      },
+      "mark": {
+        "type": "text",
+        "dy": -12,
+        "dx": -67,
+        "size": 12
+        },
+      "transform": [
+        {"filter": "datum.Category == '2050 Target'"}
+      ],
+      "encoding": {
+        "text": {
+          "value": "2050 Target - Net Zero"
+        },
+        "x": {
+          "field": "Year",
+          "type": "quantitative",
+          "axis": {
+            "format": "d"
+          }
+        },
+        "y": {
+          "field": "Emissions",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_net_zero_2030_target_tracking_modified.csv",
+        "format": {"type": "csv"}
+      },
+      "mark": {
+        "type": "text",
+        "dy": -10,
+        "dx": -60,
+        "size": 12
+        },
+      "transform": [
+        {"filter": "datum.Category == '2030 Target'"}
+      ],
+      "encoding": {
+        "text": {
+          "value": ["2030 Target", "43% below 2005", "emission levels"]
+        },
+        "x": {
+          "field": "Year",
+          "type": "quantitative",
+          "axis": {
+            "format": "d"
+          }
+        },
+        "y": {
+          "field": "Emissions",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_net_zero_2030_target_tracking_modified.csv",
+        "format": {"type": "csv"}
+      },
+      
+      "mark": {
+        "type": "text",
+        "dx": -170,
+        "dy": 50,
+        "size": 12
+        },
+      "transform": [
+        {"filter": "datum.Year == '2030' && datum.Emissions == 357.52"}
+      ],
+      "encoding": {
+        "text": {
+          "value": ["By 2030, it is expected for", "the With Additional Measures","Scenario to reach 37%", "below the 2005 levels"]
+        },
+        "x": {
+          "field": "Year",
+          "type": "quantitative",
+          "axis": {
+            "format": "d"
+          }
+        },
+        "y": {
+          "field": "Emissions",
+          "type": "quantitative"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_net_zero_2030_target_tracking_modified.csv",
+        "format": {"type": "csv"}
+      },
+      
+      "mark": {
+        "type": "text",
+        "dx": 90,
+        "dy": -50,
+        "size": 12
+        },
+      "transform": [
+        {"filter": "datum.Year == '2030' && datum.Emissions == 386.04"}
+      ],
+      "encoding": {
+        "text": {
+          "value": ["By 2030, it is expected for", "the Baseline Scenario to", "reach 42% below the 2005", "levels"]
+        },
+        "x": {
+          "field": "Year",
+          "type": "quantitative",
+          "axis": {
+            "format": "d"
+          }
+        },
+        "y": {
+          "field": "Emissions",
+          "type": "quantitative"
+        }
       }
     }
+  ],
+  "resolve": {
+    "scale": {
+      "color": "independent"
+    }
+},
+"config": {
+  "legend": {
+    "orient": "bottom",
+    "direction": "vertical"
   }
+}
+}

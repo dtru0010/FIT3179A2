@@ -4,6 +4,9 @@ vegaEmbed("#production", vg_1, {actions: false}).then(function(result){}).catch(
 var vg_2 = "./visualisations/ausEnergyConsumFuelState.json";
 vegaEmbed("#consumption", vg_2, {actions: false}).then(function(result){}).catch(console.error);
 
+var vg_3 = "./visualisations/ausEnergyFlow2023.json";
+vegaEmbed("#flow", vg_3, {actions: false}).then(function(result){}).catch(console.error);
+
 var vg_4 = "./visualisations/ausNetZeroTracking.json";
 vegaEmbed("#netzero", vg_4, {actions: false}).then(function(result){}).catch(console.error);
 

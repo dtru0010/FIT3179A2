@@ -2,17 +2,19 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Energy Production by Fuel Type",
-    "fontSize": 14,
-    "dx": -63
+    "fontSize": 15,
+    "dx": -41
   },
-  "width": 340,
+  "width": 310,
   "height": 200,
+  "background": "#FDFBF9",
+  "view": {"fill": "#FDFBF9"},
   "encoding": {
     "x": {
           "field": "Year",
           "type": "ordinal",
           "axis": {
-            "labelAngle": 45,
+            "labelAngle": -45,
             "title": null
           }
         }
@@ -41,7 +43,7 @@
           "title": "Fuel Type",
           "scale": {
             "domain": ["LPG", "Renewables", "Brown Coal", "Crude Oil + NGL", "Natural Gas", "Black Coal"],
-            "range": ["#8452bd","#f2cf5b","#9ecae9","#f58518","#d6a5c9","#4c78a8"]
+            "range": ["#6e016b","#a1d99b","#9ecae9","#f2cf5b","#a583cc","#4c78a8"]
           }
         },
         "order": {"field": "fuel_order"}
@@ -124,6 +126,30 @@
             "format": ".2f"
           }
         ]
+      }
+    },
+    {
+      "data": {
+        "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_energy_production_by_fuel.csv",
+        "format": {"type": "csv"}
+      },
+      "transform": [
+        {
+          "filter": "datum.Year == '2022-23'"
+        }
+      ],
+      "mark": {
+        "type": "text"
+      },
+      "encoding": {
+        "x": {
+          "field": "Year",
+          "type": "nominal"
+        },
+        "y": {
+          "field": "Energy_Unit",
+          "type": "quantitative"
+        }
       }
     }
   ]

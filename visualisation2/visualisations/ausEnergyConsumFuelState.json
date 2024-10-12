@@ -3,10 +3,12 @@
   "title": {
     "text": "Energy Consumption by Fuel Type",
     "fontSize": 15,
-    "dx": -57
+    "dx": -45
   },
-  "width": 360,
+  "width": 335,
   "height": 200,
+  "background": "#FDFBF9",
+  "view": {"fill": "#FDFBF9"},
   "data": {
     "url": "https://raw.githubusercontent.com/dtru0010/FIT3179A2/refs/heads/main/visualisation2/data/aus_energy_consum_by_fuel_state.csv",
     "format": {"type": "csv"}
@@ -51,7 +53,7 @@
         "field": "Year",
         "type": "nominal",
         "axis": {
-          "labelAngle": 45,
+          "labelAngle": -45,
           "title": null
         }
       }
@@ -76,7 +78,7 @@
             "title": "Fuel Type",
             "scale": {
               "domain": ["Renewables", "Gas", "Coal", "Oil"],
-              "range": ["#f2cf5b","#d6a5c9","#4c78a8","#f58518"]
+              "range": ["#a1d99b","#a583cc","#4c78a8","#f2cf5b"]
             }
           },
           "order": {"field": "fuel_order"}
