@@ -3,9 +3,9 @@
   "title": {
     "text": "Energy Production by Fuel Type",
     "fontSize": 15,
-    "dx": -41
+    "dx": -87
   },
-  "width": 310,
+  "width": 300,
   "height": 200,
   "background": "#FDFBF9",
   "view": {"fill": "#FDFBF9"},

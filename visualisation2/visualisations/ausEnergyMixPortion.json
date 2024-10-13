@@ -3,9 +3,9 @@
   "title": {
     "text": "Energy Mix over Time",
     "fontSize": 14,
-    "dx": -99
+    "dx": -133
   },
-  "width": 340,
+  "width": 337,
   "height": 200,
   "background": "#FDFBF9",
   "view": {"fill": "#FDFBF9"},
@@ -37,7 +37,7 @@
         "y": {
           "field": "Portion",
           "type": "quantitative",
-          "title": "Portion of Consumption (%)",
+          "title": "Portion of Energy Consumed (%)",
           "scale": {
             "domainMax": 100
           }

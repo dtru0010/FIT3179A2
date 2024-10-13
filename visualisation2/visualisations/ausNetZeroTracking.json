@@ -3,9 +3,9 @@
   "title": {
     "text": "Emission Projection Tracking against the 2030 Target",
     "fontSize": 14,
-    "dx": -38
+    "dx": -73
   },
-  "width": 430,
+  "width": 427,
   "height": 200,
   "background": "#FDFBF9",
   "view": {"fill": "#FDFBF9"},

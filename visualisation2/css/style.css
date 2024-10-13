@@ -15,7 +15,7 @@ h2 {
 }
 
 p {
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 100;
     font-family: 'Space Grotesk';
     line-height: 20px;
@@ -41,3 +41,32 @@ p {
     background-color: #FDFBF9;
 }
 
+.coal {
+    color: #4c78a8;
+    font-weight: bold;
+}
+
+.oil {
+    color: #f2cf5b;
+    font-weight: bold;
+}
+
+.gas {
+    color: #a583cc;
+    font-weight: bold;
+}
+
+.renewables {
+    color: #a1d99b;
+    font-weight: bold;
+}
+
+.additional {
+    color: #87d4de;
+    font-weight: bold;
+}
+
+.baseline {
+    color: #6be36b;
+    font-weight: bold;
+}

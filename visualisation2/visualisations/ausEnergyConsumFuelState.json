@@ -3,9 +3,9 @@
   "title": {
     "text": "Energy Consumption by Fuel Type",
     "fontSize": 15,
-    "dx": -45
+    "dx": -87
   },
-  "width": 335,
+  "width": 329,
   "height": 200,
   "background": "#FDFBF9",
   "view": {"fill": "#FDFBF9"},
